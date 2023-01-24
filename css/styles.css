@@ -1,27 +1,26 @@
-/*===== GOOGLE FONTS =====*/
+/* google font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-/*===== VARIABLES CSS =====*/
+/* variable css */
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
+/*   coloures */
+  
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
+/*   body colour */
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
+/*   margins */
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  /*===== z index =====*/
+/*   z index */
   --z-back: -10;
   --z-fixed: 100;
 }
@@ -35,7 +34,7 @@
   }
 }
 
-/*===== BASE =====*/
+/* for base */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -71,7 +70,7 @@ img {
   display: block;
 }
 
-/*===== CLASS CSS ===== */
+/* css */
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -98,7 +97,7 @@ img {
   padding-bottom: 2rem;
 }
 
-/*===== LAYOUT =====*/
+/* layout design */
 .bd-grid {
   max-width: 1024px;
   display: grid;
@@ -116,7 +115,7 @@ img {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
-/*===== NAV =====*/
+/* nav bar */
 .nav {
   height: var(--header-height);
   display: flex;
@@ -145,7 +144,7 @@ img {
 .nav__link {
   position: relative;
   color: #fff;
-  /* color: var(--first-color); */
+  
 }
 
 .nav__link:hover {
@@ -163,7 +162,7 @@ img {
 }
 
 .nav__logo {
-  /* color: var(--second-color); */
+  
   color: var(--first-color);
   /* color: #00008B; */
   font-size: 28px;
@@ -175,7 +174,7 @@ img {
   cursor: pointer;
 }
 
-/*Active menu*/
+/* active menu bar design */
 .active::after {
   position: absolute;
   content: '';
@@ -186,12 +185,12 @@ img {
   background-color: var(--first-color);
 }
 
-/*=== Show menu ===*/
+/* menu show */
 .show {
   right: 0;
 }
 
-/*===== HOME =====*/
+/* home section */
 .home {
   position: relative;
   row-gap: 5rem;
@@ -209,13 +208,13 @@ img {
 
 .home__title-color {
   color: var(--first-color);
-  /* color: #00008B; */
+  
 }
 
 .home__social {
   display: flex;
   flex-direction: column;
-  /* color: #00008B; */
+  
 }
 
 .home__social-icon {
@@ -223,13 +222,11 @@ img {
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
   color: var(--second-color);
-  /* color: var(--first-color); */
-  /* color: #00008B; */
 }
 
 .home__social-icon:hover {
   color: var(--first-color);
-  /* color: #00008B; */
+  
 }
 
  .home__img {
@@ -270,7 +267,7 @@ img {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== ABOUT =====*/
+/* about section */
 .about__container {
   row-gap: 2rem;
   text-align: center;
@@ -289,7 +286,7 @@ img {
   border-radius: .5rem;
 }
 
-/* Education  */
+/* Education section  */
 .education__container{
   margin: 70px;
   width: 90%;
@@ -308,12 +305,7 @@ img {
 }
 
 h2{
-  /* text-transform: uppercase;
-  margin: 0;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  
   text-align: center;
 }
 
@@ -335,7 +327,7 @@ p{
   margin-left: 7px;
 }
 
-/* ===== SKILLS =====*/
+/* skill section */
 .skills__container {
   row-gap: 2rem;
   text-align: center;
@@ -402,7 +394,7 @@ p{
   border-radius: .5rem;
 }
 
-/* ===== WORK =====*/
+/* work section */
 .work__container {
   row-gap: 2rem;
 }
@@ -421,7 +413,7 @@ p{
   transform: scale(1.1);
 }
 
-/* ===== CONTACT =====*/
+/* contact section */
 .contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
@@ -442,7 +434,7 @@ p{
   margin-left: auto;
 }
 
-/* ===== FOOTER =====*/
+/* footer */
 .footer {
   background-color: var(--second-color);
   color: #fff;
@@ -470,7 +462,7 @@ p{
   font-size: var(--smaller-font-size);
 }
 
-/* ===== MEDIA QUERIES=====*/
+/* media queries section */
 @media screen and (max-width: 320px) {
   .home {
     row-gap: 2rem;
