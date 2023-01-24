@@ -1,4 +1,4 @@
-/*===== MENU SHOW =====*/ 
+//  MENU 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
@@ -11,17 +11,17 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-toggle','nav-menu')
 
-/*==================== REMOVE MENU MOBILE ====================*/
+// remove menu bar
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
+    
     navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+// active links of scroll section
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -41,26 +41,15 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-/*===== SCROLL REVEAL ANIMATION =====*/
+// scroll animation part
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
     duration: 2000,
     delay: 250,
-//     reset: true
 });
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img,.education__container, .contact__input',{interval: 300}); 
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwlNRnlyPXoa4297oK6P6Q70m-KdGNbhe_wqq11r7lVVoo_isUl9dSOczuVoRvbtPhn/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
